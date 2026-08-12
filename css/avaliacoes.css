@@ -1,0 +1,60 @@
+/* ============================================================
+   AVALIAÇÕES — AT ODONTOLOGIA ESPECIALIZADA
+   Extensão do design system existente.
+============================================================ */
+.reviews { background: var(--color-offwhite); padding: var(--space-xl) 0; }
+.review-layout { display:grid; grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr); gap:2rem; align-items:start; margin-top:3rem; }
+.review-form-card,.review-summary { background:rgba(255,255,255,.92); border:1px solid var(--color-line); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); }
+.review-form-card { padding:clamp(1.4rem,3vw,3rem); }
+.review-step { display:flex; gap:1rem; align-items:flex-start; margin:1.4rem 0 1rem; }
+.review-step__number { flex:0 0 auto; width:2.1rem; height:2.1rem; display:grid; place-items:center; border-radius:50%; background:var(--color-nude); color:var(--color-rosegold-deep); font-size:.72rem; font-weight:700; }
+.review-step h3 { margin:0 0 .25rem; color:var(--color-espresso); font-family:var(--font-display); font-size:1.15rem; }
+.review-step p { margin:0; color:var(--color-muted); font-size:.82rem; }
+.professional-picker { display:grid; grid-template-columns:1fr 1fr; gap:.9rem; }
+.professional-choice { position:relative; display:flex; align-items:center; gap:.8rem; padding:.85rem; border:1px solid var(--color-line); border-radius:18px; background:var(--color-white); color:var(--color-text); text-align:left; cursor:pointer; transition:.25s ease; }
+.professional-choice:hover,.professional-choice:focus-visible { border-color:var(--color-rosegold-light); transform:translateY(-2px); outline:none; }
+.professional-choice.is-selected { border-color:var(--color-rosegold); box-shadow:0 0 0 3px rgba(192,143,126,.13); background:#fffaf7; }
+.professional-choice__photo { width:52px;height:52px; border-radius:50%; padding:2px; border:1px solid var(--color-rosegold-light); overflow:hidden; flex:0 0 auto; }
+.professional-choice__photo img { width:100%;height:100%;object-fit:cover;border-radius:50%; }
+.professional-choice strong,.professional-choice small { display:block; }
+.professional-choice strong { font-family:var(--font-display); font-size:.98rem; }
+.professional-choice small { color:var(--color-muted); font-size:.72rem; margin-top:.1rem; }
+.professional-choice__check { margin-left:auto; width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:var(--color-rosegold);color:white;font-size:.75rem;opacity:0;transform:scale(.7);transition:.2s; }
+.professional-choice.is-selected .professional-choice__check { opacity:1; transform:scale(1); }
+.star-rating { display:flex; gap:.25rem; margin:.4rem 0 .2rem; }
+.star-rating button { border:0; background:none; padding:.05rem .15rem; font-size:clamp(2rem,5vw,2.6rem); line-height:1; color:#d7cbc4; cursor:pointer; transition:transform .18s,color .18s; }
+.star-rating button:hover,.star-rating button:focus-visible { transform:translateY(-2px) scale(1.05); outline:none; }
+.star-rating button.is-active { color:var(--color-rosegold); }
+.rating-value { color:var(--color-muted); font-size:.78rem; margin:0; }
+.review-field { margin:1.1rem 0; }
+.review-field label { display:block; margin-bottom:.45rem; font-size:.8rem; font-weight:600; color:var(--color-espresso); }
+.review-field input,.review-field textarea { width:100%; border:1px solid var(--color-line); background:var(--color-offwhite); border-radius:12px; padding:.85rem 1rem; font:inherit; color:var(--color-text); outline:none; transition:border-color .2s,box-shadow .2s; }
+.review-field textarea { resize:vertical; min-height:145px; }
+.review-field input:focus,.review-field textarea:focus { border-color:var(--color-rosegold); box-shadow:0 0 0 3px rgba(192,143,126,.11); }
+.review-field__meta { display:flex; justify-content:space-between; gap:1rem; margin-top:.35rem; color:var(--color-muted); font-size:.68rem; }
+.name-options { display:grid; grid-template-columns:repeat(3,1fr); gap:.6rem; }
+.name-options label { cursor:pointer; }
+.name-options input { position:absolute; opacity:0; pointer-events:none; }
+.name-options span { display:block; padding:.75rem .65rem; border:1px solid var(--color-line); border-radius:12px; text-align:center; font-size:.73rem; color:var(--color-muted); transition:.2s; }
+.name-options input:checked + span { border-color:var(--color-rosegold); color:var(--color-espresso); background:#fffaf7; box-shadow:0 0 0 2px rgba(192,143,126,.08); }
+.review-name-preview { margin:.45rem 0 0; color:var(--color-muted); font-size:.72rem; }
+.review-name-preview strong { color:var(--color-rosegold-deep); }
+.consent-row { display:flex; gap:.7rem; align-items:flex-start; margin:1.2rem 0; color:var(--color-muted); font-size:.74rem; line-height:1.55; cursor:pointer; }
+.consent-row input { margin-top:.18rem; accent-color:var(--color-rosegold); }
+.consent-row small { display:block; color:#8a7a70; font-size:.68rem; }
+.review-honeypot { position:absolute!important; left:-9999px!important; width:1px!important; height:1px!important; opacity:0!important; }
+.review-error { min-height:1rem; margin:.25rem 0 0; color:#a33c32; font-size:.7rem; }
+.review-feedback { margin:.9rem 0 0; font-size:.78rem; line-height:1.5; }
+.review-feedback.is-success { color:#4d7257; }.review-feedback.is-error { color:#a33c32; }
+.review-submit.is-loading { opacity:.7; pointer-events:none; }
+.review-summary { padding:2rem; position:sticky; top:110px; background:var(--color-espresso); color:white; overflow:hidden; }
+.review-summary:after { content:""; position:absolute; width:180px;height:180px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-80px;top:-70px; }
+.review-summary__intro .eyebrow { color:var(--color-rosegold-light); }.review-summary h3 { font-family:var(--font-display); font-size:1.7rem; margin:.4rem 0 .65rem; }.review-summary p { color:rgba(255,255,255,.7); font-size:.8rem; line-height:1.7; }
+.review-summary__professionals { display:grid; gap:.8rem; margin-top:1.5rem; }
+.review-score { border:1px solid rgba(255,255,255,.12); border-radius:16px; padding:1rem; display:grid; grid-template-columns:1fr auto; gap:.25rem 1rem; background:rgba(255,255,255,.04); }
+.review-score span { font-family:var(--font-display); }.review-score strong { color:var(--color-rosegold-light); font-size:1.1rem; }.review-score small { grid-column:1/-1; color:rgba(255,255,255,.55); font-size:.68rem; }
+.reviews-public { margin-top:3.5rem; }.reviews-toolbar { display:flex; justify-content:center; gap:.5rem; flex-wrap:wrap; margin-bottom:1.4rem; }
+.review-filter { border:1px solid var(--color-line); background:white; color:var(--color-muted); padding:.6rem 1rem; border-radius:999px; font:inherit; font-size:.75rem; cursor:pointer; transition:.2s; }.review-filter:hover,.review-filter.is-active { background:var(--color-rosegold); border-color:var(--color-rosegold); color:white; }
+.reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; }.review-card { background:white; border:1px solid var(--color-line); border-radius:18px; padding:1.25rem; box-shadow:var(--shadow-card); }.review-card__top { display:flex; justify-content:space-between; gap:1rem; align-items:flex-start; }.review-card__doctor { color:var(--color-rosegold-deep); font-size:.72rem; font-weight:600; }.review-card__stars { color:var(--color-rosegold); letter-spacing:.08em; font-size:.75rem; white-space:nowrap; }.review-card__comment { color:var(--color-text); font-size:.82rem; line-height:1.75; margin:1rem 0; }.review-card__bottom { display:flex; justify-content:space-between; gap:1rem; align-items:center; padding-top:.8rem; border-top:1px solid var(--color-line); }.review-card__bottom strong { font-size:.72rem; color:var(--color-espresso); }.review-card__bottom time { color:var(--color-muted); font-size:.62rem; }.reviews-empty,.reviews-state { text-align:center; color:var(--color-muted); padding:2rem; font-size:.8rem; }
+@media(max-width:900px){.review-layout{grid-template-columns:1fr}.review-summary{position:static}.reviews-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.professional-picker,.name-options,.reviews-grid{grid-template-columns:1fr}.review-form-card{padding:1.25rem}.professional-choice{min-height:72px}.review-summary{padding:1.5rem}.star-rating{justify-content:center}.review-field__meta{align-items:flex-end;flex-direction:column;gap:.15rem}.review-card__top{flex-direction:column;gap:.3rem}}
